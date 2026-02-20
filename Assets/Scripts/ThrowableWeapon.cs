@@ -15,18 +15,22 @@ public class ThrowableWeapon : MonoBehaviour //to decide which type of throwable
         switch (weaponType)
         {
             case 1:
-                bottleType1();
+                
                 gameObject.tag = "type1";
+              
+               
                 Debug.Log("1");
                 break;
             case 2:
-                bottleType2();
+              
                 gameObject.tag = "type2";
+                
                 Debug.Log("1");
                 break;
             case 3:
-                bottleType3();
+            
                 gameObject.tag = "type3";
+               
                 Debug.Log("1");
                 break;
         }
@@ -46,37 +50,11 @@ public class ThrowableWeapon : MonoBehaviour //to decide which type of throwable
     {
 
 
-        switch (weaponType)
-        {
-            case 1:
-                bottleType1();
-                break;
-            case 2:
-                bottleType2();
-                break;
-            case 3:
-                bottleType3();
-                break;
-        }
+       
 
 
     }
 
-
-    void bottleType1()
-    {
-        //WeaponSide = true;
-    }
-    void bottleType2()
-    {
-        //WeaponSide = true;
-
-    }
-    void bottleType3()
-    {
-        //WeaponSide = false;
-
-    }
     
 }
 

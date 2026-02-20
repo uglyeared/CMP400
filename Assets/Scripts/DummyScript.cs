@@ -4,8 +4,8 @@ using UnityEngine;
 public class DummyScript : MonoBehaviour
 {
 
-    int Health;
-    bool Defending;
+    public int Health;
+    public bool Defending;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,32 +20,45 @@ public class DummyScript : MonoBehaviour
     {
 
 
-        if (Health == 0 & Defending == true)
+        if (Health <= 0)
         {
             //kill self
-            object obj = null;
+           
+            Destroy(gameObject);
         }
         else
         {
-            Health += 50;
+            //Health += 50;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         GameObject collisionITem = collision.gameObject;
-        if (collisionITem.CompareTag("bottle1"))
+
+        if (collisionITem.CompareTag("type1"))
         {
             Debug.Log("type1");
+            Health -= 20;
+            Debug.Log(Health);
 
         }
-        else if (collisionITem.CompareTag("bottle2"))
+        else if (collisionITem.CompareTag("type2"))
         {
-            Debug.Log("type1");
+            Debug.Log("type2");
+           
+            Health -= 50;
+            Debug.Log(Health);
         }
-        else
+        else if (collisionITem.CompareTag("type3"))
         {
-            Debug.Log("type1");
+            Debug.Log("type3");
+            if (Health > 30)
+            {
+                Health = 50;
+            }
+            else { Health += 20; }
+            Debug.Log(Health);
         }
     }
 }
