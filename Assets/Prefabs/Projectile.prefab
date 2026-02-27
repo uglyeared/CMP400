@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 2432395217956704497}
   - component: {fileID: 4781083271591313661}
   - component: {fileID: 1409607263303215553}
+  - component: {fileID: -4092553473050495408}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -149,7 +150,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.2500005, y: 2.8134003, z: 0.5}
-  m_LocalScale: {x: 75, y: 75, z: 75}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3630682366655114361}
@@ -345,8 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1d69e74ce07bd4aba324e40d526d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableWeapon
+  input: {fileID: -4092553473050495408}
   weaponType: 1
   weaponSide: 1
+  force: 1000
+  destructionTimer: 5
 --- !u!135 &1409607263303215553
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -368,6 +372,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.005
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4092553473050495408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522608718247758011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9f9dc4134386c449ce63ae686684e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReadUIInput
+  toggle: {fileID: 0}
+  slider: {fileID: 0}
+  sliderVal: 0
+  ddOpt: {fileID: 0}
 --- !u!1 &3732799019308585873
 GameObject:
   m_ObjectHideFlags: 0
