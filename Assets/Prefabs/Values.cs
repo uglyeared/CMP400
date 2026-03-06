@@ -4,7 +4,7 @@ using UnityEngine;
 public static class Values
 {
     public static float weaponType;
-
-
+    public static bool enemyStatus;
+    public static float enemySpeed =0.5f;
 
 }

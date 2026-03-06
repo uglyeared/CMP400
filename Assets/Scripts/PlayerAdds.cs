@@ -8,7 +8,13 @@ public class PlayerAdds : MonoBehaviour
     public float shotFrequency = 0.5f;
     float lastShot;
 
+
+    float currentAngle;
+    float x;
+    float y;
+
     public InputActionReference shoot;
+    public InputActionReference selectRotary;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +24,8 @@ public class PlayerAdds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+       
         if (shoot.action.ReadValue<float>() == 1 && lastShot <= 0) 
         {
 
@@ -25,5 +33,12 @@ public class PlayerAdds : MonoBehaviour
             lastShot = shotFrequency;
         }
         lastShot -= Time.deltaTime;
+
+        //currentAngle = selectRotary.action.ReadValue<float>();
+        //x = Input.GetAxis("JoystickX");
+        //y = Input.GetAxis("JoystickY");
+        //currentAngle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
+        //Debug.Log(currentAngle);
+
     }
 }

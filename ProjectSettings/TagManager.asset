@@ -8,6 +8,8 @@ TagManager:
   - type1
   - type2
   - type3
+  - BoxB
+  - BoxA
   layers:
   - Default
   - TransparentFX

@@ -126,3 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3200997f4523c4148bb8d04fed4bcb7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DummyScript
+  Health: 0
+  Defending: 0
+  pointA: {fileID: 6435889851869552263, guid: 0c5039a82fb7add4ea45734afe10ec20, type: 3}
+  pointB: {fileID: 5314213430982064313, guid: d82ba1900e07df749abb93159f9bec41, type: 3}
