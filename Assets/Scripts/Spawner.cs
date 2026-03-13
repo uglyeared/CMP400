@@ -8,13 +8,19 @@ public class Spawner : MonoBehaviour
     void Start()
     {
        
-        Instantiate(spawnItem);
+        
        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Values.spawnDummy == true)
+        {
+            Instantiate(spawnItem);
+            Values.spawnDummy = false;
+        }
+
         //Instantiate(spawnItem);
     }
 }

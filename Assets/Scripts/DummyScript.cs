@@ -21,7 +21,7 @@ public class DummyScript : MonoBehaviour
         pointBs = pointB.GetComponent<Transform>();
         target = pointAs;
 
-        Defending = Values.enemyStatus;
+        Defending = Values.setDummy;
 
 
     }
@@ -29,7 +29,7 @@ public class DummyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Values.enemyStatus)
+        if (Values.setDummy)
         {
             Defending = true;
         }

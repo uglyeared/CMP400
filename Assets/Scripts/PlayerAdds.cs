@@ -41,4 +41,6 @@ public class PlayerAdds : MonoBehaviour
         //Debug.Log(currentAngle);
 
     }
+   
+
 }
